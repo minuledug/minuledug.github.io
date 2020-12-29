@@ -203,30 +203,70 @@
         <article class="article cl">
             <div class="article-wrap">
                 <div class="article-description">
-                    <p>Menyisipkan script Javascript</p>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
-<script>
-    function arrayToTable(tableData) {
-        var table = $('<table></table>');
-        $(tableData).each(function (i, rowData) {
-            var row = $('<tr></tr>');
-            $(rowData).each(function (j, cellData) {
-                row.append($('<td>'+cellData+'</td>'));
-            });
-            table.append(row);
-        });
-        return table;
-    }
-
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:4000/personal/tes.csv",
-        success: function (data) {
-            $('body').append(arrayToTable(Papa.parse(data).data));
-        }
-    });
-</script>
+                    <table>
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>Jenis Kelamin</th>
+<th>Jabatan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Nurkholis,S.Pd.I</td>
+<td>L</td>
+<td>Kepala Madrasah</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ikhwan Hariyanto</td>
+<td>L</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Miftakhul Jannah, S.Pd.I</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Evi Lailatul Rohmah, S.Psi</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lailatus Sa’diah, S.Pd.I</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Dewi Fatimah, S.Pd.</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Anisa Rusiati</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Delia Paramita Nur Umama M</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Dwi Muslichah, S.Pd.</td>
+<td>P</td>
+<td>Guru</td>
+</tr>
+</tbody></table>
 
                 </div>
             </div>
